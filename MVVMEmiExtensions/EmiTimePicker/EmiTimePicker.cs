@@ -36,9 +36,8 @@ namespace MVVMEmiExtensions
                 CurrentHour = new Integer(timeSpan.Hours);
                 CurrentMinute = new Integer(timeSpan.Minutes);
                 SetIs24HourView(Java.Lang.Boolean.True);
-                SetOnTimeChangedListener(new EmiListener(this));
+                SetOnTimeChangedListener(new EmiTimeChangedListener(this));
             }
-
         }
 
         public TimeSpan Value
