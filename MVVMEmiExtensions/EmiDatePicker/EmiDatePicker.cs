@@ -32,7 +32,7 @@ namespace MVVMEmiExtensions
             }
             set
             {
-                Init(value.Year, (value.Month - 1), value.Day, new EmiListener(this));
+                Init(value.Year, (value.Month - 1), value.Day, new EmiDateChangedListener(this));
             }
         }
 

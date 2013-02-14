@@ -12,29 +12,18 @@ using Android.Widget;
 
 namespace MVVMEmiExtensions
 {
-    public class EmiListener : Java.Lang.Object, DatePicker.IOnDateChangedListener, TimePicker.IOnTimeChangedListener
+    public class EmiDateChangedListener : Java.Lang.Object, DatePicker.IOnDateChangedListener
     {
         private EmiDatePicker datePicker;
-        private EmiTimePicker timePicker;
 
-        public EmiListener(EmiDatePicker datePicker)
+        public EmiDateChangedListener(EmiDatePicker datePicker)
         {
             this.datePicker = datePicker;
-        }
-
-        public EmiListener(EmiTimePicker timePicker)
-        {
-            this.timePicker = timePicker;
         }
 
         public void OnDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth)
         {
             datePicker.InternalSetValueAndRaiseChanged(new DateTime(year, (monthOfYear + 1), dayOfMonth));
-        }
-
-        public void OnTimeChanged(TimePicker view, int hourOfDay, int minute)
-        {
-            timePicker.InternalSetValueAndRaiseChanged(new TimeSpan(hourOfDay, minute, 0));
         }
     }
 }
