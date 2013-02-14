@@ -42,7 +42,8 @@
   <ItemGroup>
     <Compile Include="EmiDatePicker\EmiDatePicker.cs" />
     <Compile Include="EmiDatePicker\EmiDatePickerValueTargetBinding.cs" />
-    <Compile Include="EmiListener.cs" />
+    <Compile Include="EmiDateChangedListener.cs" />
+    <Compile Include="EmiTimeChangedListener.cs" />
     <Compile Include="EmiTimePicker\EmiTimePicker.cs" />
     <Compile Include="EmiTimePicker\EmiTimePickerValueTargetBinding.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
